@@ -1,0 +1,36 @@
+{
+  "name": "space",
+  "description": "a guide to seattle's coworking & maker spaces",
+  "version": "0.0.0",
+  "repository": {
+    "url": "git://github.com/sethvincent/space.git"
+  },
+  "main": "app.js",
+  "scripts": {
+    "bundle-css": "rework-npm style.css -o bundle/app.css",
+    "bundle-js": "browserify app.js -o bundle/app.js -t brfs",
+    "bundle": "npm run bundle-css & npm run bundle-js",
+    "watch-js": "watchify app.js -o bundle/app.js -t brfs",
+    "watch-css": "gazer -p style.css npm run bundle-css",
+    "watch": "npm run watch-js & npm run watch-css",
+    "start": "serve -p 3123 & npm run watch"
+  },
+  "dependencies": {
+    "dom-events": "^0.1.1",
+    "domify": "^1.3.0",
+    "element-class": "^0.1.1",
+    "fastclick": "^1.0.2",
+    "flatsheet": "^0.2.3",
+    "handlebars": "^1.3.0",
+    "leaflet": "^0.7.3",
+    "normalize-css": "^2.3.1"
+  },
+  "devDependencies": {
+    "brfs": "^1.1.2",
+    "browserify": "^4.2.3",
+    "gazer": "0.0.3",
+    "rework-npm-cli": "^0.1.1",
+    "serve": "^1.4.0",
+    "watchify": "^0.10.2"
+  }
+}

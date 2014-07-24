@@ -1,0 +1,33 @@
+var Flatsheet = require('flatsheet');
+var Handlebars = require('handlebars');
+var eve = require('dom-events');
+var elClass = require('element-class');
+var Leaflet = require('leaflet');
+var domify = require('domify');
+var fs = require('fs');
+
+var fastClick = require('fastclick');
+fastClick(document.body);
+
+var flatsheet = new Flatsheet();
+
+/* pull in template for showing info about a location */
+var spaceTemplate = Handlebars.compile(fs.readFileSync('templates/space.html', 'utf8'));
+
+/* set image path */
+L.Icon.Default.imagePath = 'node_modules/leaflet/dist/images/';
+
+var list = document.getElementById('list');
+
+flatsheet.sheet('zbckvrzp4ga27k0frnlhjq', getRows);
+
+function getRows (error, response) {
+  var rows = response.rows;
+  var l = rows.length;
+
+  for (var i=0; i<l; i++){
+    console.log(rows[i].name)
+    var html = domify(spaceTemplate(rows[i]));
+    list.appendChild(html);
+  }
+}
