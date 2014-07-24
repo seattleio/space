@@ -7,7 +7,7 @@
   },
   "main": "app.js",
   "scripts": {
-    "bundle-css": "rework-npm style.css -o bundle/app.css",
+    "bundle-css": "rework-npm style.css | myth > bundle/app.css",
     "bundle-js": "browserify app.js -o bundle/app.js -t brfs",
     "bundle": "npm run bundle-css & npm run bundle-js",
     "watch-js": "watchify app.js -o bundle/app.js -t brfs",
@@ -29,6 +29,7 @@
     "brfs": "^1.1.2",
     "browserify": "^4.2.3",
     "gazer": "0.0.3",
+    "myth": "^1.1.1",
     "rework-npm-cli": "^0.1.1",
     "serve": "^1.4.0",
     "watchify": "^0.10.2"

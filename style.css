@@ -6,7 +6,7 @@ input,
 button,
 select,
 textarea {
-  font: 16px/1.2 "Helvetica Neue", Helvetica, arial, sans-serif;
+  font: 18px/1.5 "Helvetica Neue", Helvetica, arial, sans-serif;
   color: #444;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -29,7 +29,7 @@ h5,
 h6 {
   margin: 0px;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 
 a {
@@ -38,7 +38,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: color(#3c80c3 shade(40%));
 }
 
 a:active,
@@ -87,12 +87,50 @@ header {
   letter-spacing: 2px;
 }
 
-#list {
+#top-nav {
+  margin-top: 20px;
+}
+
+#top-nav ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+#top-nav li {
+  display: inline;
+}
+
+#top-nav a {
+  padding: 5px 8px;
+  border-radius: 3px;
+  background-color: #F34A53;
+  color: #fff;
+  font-weight: 500;
+}
+
+#top-nav a:hover {
+  background-color: color(#F34A53 shade(20%));
+}
+
+#list-content {
 
 }
 
 .space {
   margin: 0px 0px 20px 0px;
+}
+
+#about-content {
+
+}
+
+#about-content h2 {
+  font-weight: 300;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
 
 /* mobile size */
