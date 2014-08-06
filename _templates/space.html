@@ -1,0 +1,23 @@
+<div class="space clearfix">
+  <h3 class="space-name">{{ name }}</h3>
+  <div class="space-description">
+    {{ description }}
+  </div>
+  <div class="space-info">
+    <div class="pull-left">
+      <div class="space-address">{{ address }}</div>
+      <div class="space-website"><a href="{{ website }}" target="_blank">{{ website }}</a></div>
+    </div>
+
+    <div class="pull-right">
+      <div class="space-social">
+        {{#if twitter }}
+        <a href="{{ twitter }}" target="_blank"><i class="fa fa-twitter"></i></a>
+        {{/if}}
+
+        {{#if facebook }}
+        <a href="{{ facebook }}" target="_blank"><i class="fa fa-facebook"></i></a>
+        {{/if}}
+      </div>
+  </div>
+</div>

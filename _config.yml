@@ -1,0 +1,11 @@
+# Site settings
+title: "Space | A guide to coworking & maker spaces in Seattle"
+description: "Learn about the coworking & maker spaces in Seattle, WA."
+baseurl: ""
+url: ""
+twitter_username: seattleio
+github_username: seattleio
+
+# Build settings
+markdown: kramdown
+permalink: none
