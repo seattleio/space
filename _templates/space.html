@@ -5,8 +5,31 @@
   </div>
   <div class="space-info">
     <div class="pull-left">
-      <div class="space-address">{{ address }}</div>
-      <div class="space-website"><a href="{{ website }}" target="_blank">{{ website }}</a></div>
+      <div>
+        <span class="space-neighborhood">
+          {{ neighborhood }}
+        </span>
+
+        {{#if phone }} |
+        <span class="space-phone">
+          {{ phone }}
+        </span>
+        {{/if}}
+
+        {{#if email }} | 
+        <span class="space-email">
+          {{ email }}
+        </span>
+        {{/if}}
+      </div>
+
+      <div class="space-address">
+        <a href="https://maps.google.com?daddr={{ address }}" target="_blank">Directions | {{ address }}</a>
+      </div>
+
+      <div class="space-website">
+        <a href="{{ website }}" target="_blank">{{ website }}</a>
+      </div>
     </div>
 
     <div class="pull-right">
